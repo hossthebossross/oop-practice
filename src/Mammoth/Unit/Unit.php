@@ -46,7 +46,7 @@ abstract class Unit implements UnitInterface
         return $this->hitPoints;
     }
 
-    public function setHealth(int $health)
+    public function setHealth($health)
     {
         $this->health = $health;
     }

@@ -3,24 +3,31 @@
 namespace Mammoth\Manager;
 
 use Mammoth\Unit\UnitInterface;
-
        
 class FightManager
 {
     public function fight(UnitInterface $unit1, UnitInterface $unit2)
     {
-        $unitX = ($unit1, $unit2)
+        $unit1AttackDamage = $unit1->getAttackDmg();
+        $unit2AttackDamage = $unit2->getAttackDmg();
 
-        foreach array($unitX) {
-            while ($health >= 0) {
-            $health = ($health - ($attackDmg % $attackRate));
-            } 
-        }   
-        $winner = (($unit1, $unit2) ==> ($health >0));
-        
-        return $winner;
+        while (($unit1->getHealth() > 0) && ($unit2->getHealth() > 0)) {
+            $unit1->setHealth($unit1->getHealth() - $unit2AttackDamage);
+            $unit2->setHealth($unit2->getHealth() - $unit1AttackDamage);
+        }
 
-        // make these bitches fight to the death
-        return 'no one won';// result of the fight
+        $units = array($unit1, $unit2);
+
+        foreach ($units as $unit) {
+            if ($unit->getHealth() > 0) {
+                $winner = $unit;
+            }
+        }
+
+        if ($winner) {
+            return sprintf('The winner is %s', $winner->getName());
+        }
+
+        return 'Everyones dead';
     }
 }

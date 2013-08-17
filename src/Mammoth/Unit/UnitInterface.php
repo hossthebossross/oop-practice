@@ -5,7 +5,7 @@ namespace Mammoth\Unit;
 interface UnitInterface
 {
     function getHitPoints();
-    function setHealth(int $health);
+    function setHealth($health);
     function getHealth();
     function getSpeed();
     function getName();
