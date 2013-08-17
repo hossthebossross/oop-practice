@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__.'/UnitInterface.php');
+namespace Mammoth\Unit;
 
 abstract class Unit implements UnitInterface
 {

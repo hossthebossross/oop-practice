@@ -1,5 +1,7 @@
 <?php
 
+namespace Mammoth\Unit;
+
 interface UnitInterface
 {
     function getHitPoints();

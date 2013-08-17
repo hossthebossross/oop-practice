@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__.'/Unit.php');
+namespace Mammoth\Unit;
 
 class Zealot extends Unit
 {
