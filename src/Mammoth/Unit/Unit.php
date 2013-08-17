@@ -28,9 +28,18 @@ abstract class Unit implements UnitInterface
      */
     public $name;
 
+    /**
+    * Relative speed from 1 to 100
+    * @var int
+    */
     public $attackRate;
 
+    /**
+    * Total damage for unit
+    * @var int
+    */    
     public $attackDmg;
+
 
     public function getHitPoints()
     {
