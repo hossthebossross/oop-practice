@@ -7,6 +7,7 @@ function __autoload($class) {
 }
 
 use Mammoth\Unit\Zealot;
+use Mammoth\Unit\Marine;
 use Mammoth\Manager\FightManager;
 
 $zealot1 = new Zealot();
