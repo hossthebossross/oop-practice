@@ -10,10 +10,10 @@ use Mammoth\Unit\Zealot;
 use Mammoth\Manager\FightManager;
 
 $zealot1 = new Zealot();
-$zealot2 = new Zealot();
+$marine1 = new Marine();
 
 $fightManager = new FightManager();
 
-$fightResult = $fightManager->fight($zealot1, $zealot2);
+$fightResult = $fightManager->fight($zealot1, $marine1);
 
 var_dump($fightResult);

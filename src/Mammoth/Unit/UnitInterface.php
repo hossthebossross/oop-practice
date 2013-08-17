@@ -9,4 +9,6 @@ interface UnitInterface
     function getHealth();
     function getSpeed();
     function getName();
+    function getAttackRate();
+    function getAttackDmg();
 }

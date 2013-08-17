@@ -8,4 +8,6 @@ class Zealot extends Unit
     public $health = 100;
     public $speed = 20;
     public $name = 'Zealot';
+    public $attackRate = 2;
+    public $attackDmg = 11;
 }

@@ -28,6 +28,10 @@ abstract class Unit implements UnitInterface
      */
     public $name;
 
+    public $attackRate;
+
+    public $attackDmg;
+
     public function getHitPoints()
     {
         return $this->hitPoints;
@@ -51,5 +55,13 @@ abstract class Unit implements UnitInterface
     public function getName()
     {
         return $this->name;
+    }
+    public function getAttackRate()
+    {
+        return $this->attackRate;
+    }
+    public function getAttackDmg()
+    {
+        return $this->attackDmg;
     }
 }
