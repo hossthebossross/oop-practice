@@ -7,7 +7,13 @@ function __autoload($class) {
 }
 
 use Mammoth\Unit\Zealot;
+use Mammoth\Manager\FightManager;
 
-$zealot = new Zealot();
+$zealot1 = new Zealot();
+$zealot2 = new Zealot();
 
-var_dump($zealot);
+$fightManager = new FightManager();
+
+$fightResult = $fightManager->fight($zealot1, $zealot2);
+
+var_dump($fightResult);
