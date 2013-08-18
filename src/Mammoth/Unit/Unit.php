@@ -52,6 +52,13 @@ abstract class Unit implements UnitInterface
     */    
     public $teamAverageDmg;
 
+    /**
+     * Current health of the team
+     * @var int
+     */
+    public $teamHealth;
+
+
 
     public function getHitPoints()
     {
@@ -92,5 +99,9 @@ abstract class Unit implements UnitInterface
     public function getTeamAverageDmg()
     {
         return $this->teamAverageDmg;
+    }
+    public function getTeamHealth()
+    {
+        return $this->teamHealth;
     }
 }

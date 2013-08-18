@@ -8,11 +8,6 @@ class TeamOrganizer
 {
     public function teamAverageDmg(UnitInterface $unit1, UnitInterface $unit2, UnitInterface $unit3, UnitInterface $unit4)
     {
-       
-        $zealot1 = new Zealot();
-        $marine2 = new Marine();
-        
-
         $unit1AttackDmg = $unit1->getAttackDmg();
         $unit2AttackDmg = $unit2->getAttackDmg();
         $unit3AttackDmg = $unit3->getAttackDmg();
@@ -28,22 +23,25 @@ class TeamOrganizer
         $unit3->setAverageDmg() = ($unit3AttackDmg % $unit3AttackRate)
         $unit4->setAverageDmg() = ($unit4AttackDmg % $unit4AttackRate)
 
-        $unit1AverageDmg = $unit1->setAverageDmg()
-        $unit2AverageDmg = $unit2->setAverageDmg()
-        $unit3AverageDmg = $unit3->setAverageDmg()
-        $unit4AverageDmg = $unit4->setAverageDmg() 
+        $averageDmg1 = $unit1->setAverageDmg()
+        $averageDmg2 = $unit2->setAverageDmg()
+        $averageDmg3 = $unit3->setAverageDmg()
+        $averageDmg4 = $unit4->setAverageDmg()
 
-        $team1->setTeamAverageDmg() = $unit1AverageDmg + $unit2AverageDmg
-        $team2->setTeamAverageDmg() = $unit3AverageDmg + $unit4AverageDmg
-}
+        $team1->seteamAverageDmg() = $averageDmg1 + $averageDmg2
+        $team2->seteamAverageDmg() = $averageDmg3 + $averageDmg4
+2
 
     public function teamHealth(UnitInterface $unit1, UnitInterface $unit2, UnitInterface $unit3, UnitInterface $unit4)
     {
 
-    function setAverageDmg($averageDmg);
-    function setTeamAverageDmg($teamAverageDmg);
-    function setTeamHealth($teamHealth);
+        $health1 = $unit1->gethealth();
+        $health2 = $unit2->gethealth();
+        $health3 = $unit3->gethealth();
+        $health4 = $unit4->gethealth();
 
-        ($team2AttackDamage % $team2AttackRate));
-        ($team1attackdamage % $team1attackrate));
-        }
+        $team1->setTeamHealth() = $health1 + $health2
+        $team2->setTeamHealth() = $health3 + $health4
+    }
+    
+

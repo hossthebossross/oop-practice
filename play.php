@@ -16,8 +16,7 @@ $marine2 = new Marine();
 $zealot3 = new Zealot();
 $marine4 = new Marine();
 
-$team1 = new TeamOrganizer();
-$team2 = new TeamOrganizer();
+$teams= new TeamOrganizer();
 
 $fightManager = new FightManager();
 
