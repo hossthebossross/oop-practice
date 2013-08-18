@@ -2,27 +2,25 @@
 
 namespace Mammoth\Manager;
 
-use Mammoth\team\UnitInterface;
+use Mammoth\Unit\UnitInterface;
        
 class FightManager
 {
     public function fight(UnitInterface $team1, Unitinterface $team2)
     {
-        $team1attackdamage = $team1->getAttackDmg();
-        $team2AttackDamage = $team2->getAttackDmg();
-        $team1attackrate = $team1->getAttackRate();
-        $team2AttackRate = $team2->getAttackRate();
+        $team1AverageDmg = $team1->getTeamAverageDmg();
+        $team2AverageDmg = $team2->getTeamAverageDmg();
 
 
-        while (($team1->getHealth() > 0) && ($team2->getHealth() > 0)) {
-            $team1->setHealth($team1->getHealth() - ($team2AttackDamage % $team2AttackRate));
-            $team2->setHealth($team2->getHealth() - ($team1attackdamage % $team1attackrate));
-        }
+
+        while (($team1->getTeamHealth() > 0) && ($team2->getTeamHealth() > 0)) {
+            $team1->setTeamHealth($team1->getTeamHealth() - $team2AverageDmg)
+            $team2->setTeamHealth($team2->getTeamHealth() - $team1AverageDmg)
 
         $teams = array($team1, $team2);
 
         foreach ($teams as $team) {
-            if ($team->getHealth() > 0) {
+            if ($team->getTeamHealth() > 0) {
                 $winner = $team;
             }
         }

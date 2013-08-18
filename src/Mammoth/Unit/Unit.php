@@ -40,6 +40,18 @@ abstract class Unit implements UnitInterface
     */    
     public $attackDmg;
 
+        /**
+    * Relative speed from 1 to 100
+    * @var int
+    */
+    public $averageDmg;
+
+    /**
+    * Total damage for unit
+    * @var int
+    */    
+    public $teamAverageDmg;
+
 
     public function getHitPoints()
     {
@@ -72,5 +84,13 @@ abstract class Unit implements UnitInterface
     public function getAttackDmg()
     {
         return $this->attackDmg;
+    }
+        public function getAverageDmg()
+    {
+        return $this->averageDmg;
+    }
+    public function getTeamAverageDmg()
+    {
+        return $this->teamAverageDmg;
     }
 }

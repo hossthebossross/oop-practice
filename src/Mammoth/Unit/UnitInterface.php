@@ -11,4 +11,9 @@ interface UnitInterface
     function getName();
     function getAttackRate();
     function getAttackDmg();
+    function getAverageDmg();
+    function setAverageDmg($averageDmg);
+    function setTeamAverageDmg($teamAverageDmg);
+    function getTeamHealth();
+    function setTeamHealth($teamHealth);
 }

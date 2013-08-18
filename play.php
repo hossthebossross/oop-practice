@@ -9,12 +9,18 @@ function __autoload($class) {
 use Mammoth\Unit\Zealot;
 use Mammoth\Unit\Marine;
 use Mammoth\Manager\FightManager;
+use Mammoth\Manager\TeamOrganizer;
 
 $zealot1 = new Zealot();
 $marine2 = new Marine();
+$zealot3 = new Zealot();
+$marine4 = new Marine();
+
+$team1 = new TeamOrganizer();
+$team2 = new TeamOrganizer();
 
 $fightManager = new FightManager();
 
-$fightResult = $fightManager->fight($zealot1, $marine2);
+$fightResult = $fightManager->fight($team1, $team2);
 
 var_dump($fightResult);
