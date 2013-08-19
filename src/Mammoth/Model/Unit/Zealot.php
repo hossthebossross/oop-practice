@@ -1,6 +1,6 @@
 <?php
 
-namespace Mammoth\Unit;
+namespace Mammoth\Model\Unit;
 
 class Zealot extends Unit
 {

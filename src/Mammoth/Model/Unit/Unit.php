@@ -1,6 +1,6 @@
 <?php
 
-namespace Mammoth\Unit;
+namespace Mammoth\Model\Unit;
 
 abstract class Unit implements UnitInterface
 {
@@ -29,41 +29,23 @@ abstract class Unit implements UnitInterface
     public $name;
 
     /**
-    * Relative speed from 1 to 100
-    * @var int
-    */
+     * Relative speed from 1 to 100
+     * @var int
+     */
     public $attackRate;
 
     /**
-    * Total damage for unit
-    * @var int
-    */    
-    public $attackDmg;
-
-        /**
-    * Relative speed from 1 to 100
-    * @var int
-    */
-    public $averageDmg;
-
-    /**
-    * Total damage for unit
-    * @var int
-    */    
-    public $teamAverageDmg;
-
-    /**
-     * Current health of the team
+     * Total damage for unit
      * @var int
-     */
-    public $teamHealth;
+     */    
+    public $attackDmg;
 
     public function getHitPoints()
     {
         return $this->hitPoints;
     }
 
-    public function setHealth(int $health)
+    public function setHealth($health)
     {
         $this->health = $health;
     }
@@ -95,31 +77,6 @@ abstract class Unit implements UnitInterface
 
     public function getAverageDmg()
     {
-        return $this->averageDmg;
-    }
-
-    public function setAverageDmg(int $averageDmg)
-    {
-        $this->averageDmg = $averageDmg;
-    }
-
-    public function getTeamAverageDmg()
-    {
-        return $this->teamAverageDmg;
-    }
-
-    public function setTeamAverageDmg(int $teamAverageDmg)
-    {
-        $this->teamAverageDmg = $teamAverageDmg;
-    }
-
-    public function getTeamHealth()
-    {
-        return $this->teamHealth;
-    }
-
-    public function setTeamHealth(int $teamHealth)
-    {
-        $this->teamHealth = $teamHealth;
+        return $this->attackDmg / $this->attackRate;
     }
 }

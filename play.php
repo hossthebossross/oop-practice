@@ -6,20 +6,19 @@ function __autoload($class) {
     require_once($class);
 }
 
-use Mammoth\Unit\Zealot;
-use Mammoth\Unit\Marine;
-use Mammoth\Manager\FightManager;
-use Mammoth\Manager\TeamOrganizer;
+use Mammoth\Manager\Fight\FightManager;
+use Mammoth\Model\Team\Team;
+use Mammoth\Model\Unit\Zealot;
+use Mammoth\Model\Unit\Marine;
 
 $zealot1 = new Zealot();
+$zealot2 = new Zealot();
+$marine1 = new Marine();
 $marine2 = new Marine();
-$zealot3 = new Zealot();
-$marine4 = new Marine();
 
-$teams = new TeamOrganizer();
+$team1 = new Team(array($zealot1, $zealot2));
+$team2 = new Team(array($marine1, $marine2));
 
-$fightManager = new FightManager();
-
-$fightResult = $fightManager->fight($team1, $team2);
+$fightResult = FightManager::fight($team1, $team2);
 
 var_dump($fightResult);
