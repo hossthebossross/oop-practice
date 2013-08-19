@@ -10,4 +10,5 @@ class Marine extends Unit
     public $name = 'Marine';
     public $attackRate = 1;
     public $attackDmg = 5;
+    public $averageDmg = '5';
 }

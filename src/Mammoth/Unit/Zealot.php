@@ -10,4 +10,5 @@ class Zealot extends Unit
     public $name = 'Zealot';
     public $attackRate = 2;
     public $attackDmg = 9;
+    public $averageDmg = '4.5';
 }
