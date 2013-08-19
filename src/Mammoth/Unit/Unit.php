@@ -58,8 +58,6 @@ abstract class Unit implements UnitInterface
      */
     public $teamHealth;
 
-
-
     public function getHitPoints()
     {
         return $this->hitPoints;
@@ -84,35 +82,43 @@ abstract class Unit implements UnitInterface
     {
         return $this->name;
     }
+
     public function getAttackRate()
     {
         return $this->attackRate;
     }
+
     public function getAttackDmg()
     {
         return $this->attackDmg;
     }
-        public function getAverageDmg()
+
+    public function getAverageDmg()
     {
         return $this->averageDmg;
     }
-     public function setAverageDmg(int $averageDmg)
+
+    public function setAverageDmg(int $averageDmg)
     {
         $this->averageDmg = $averageDmg;
     }
+
     public function getTeamAverageDmg()
     {
         return $this->teamAverageDmg;
     }
-      public function setTeamAverageDmg(int $teamAverageDmg)
+
+    public function setTeamAverageDmg(int $teamAverageDmg)
     {
         $this->teamAverageDmg = $teamAverageDmg;
     }
+
     public function getTeamHealth()
     {
         return $this->teamHealth;
     }
-      public function setTeamHeal(int $teamHealth)
+
+    public function setTeamHealth(int $teamHealth)
     {
         $this->teamHealth = $teamHealth;
     }

@@ -12,8 +12,9 @@ class FightManager
         $teamAverageDmg2 = $team2->getTeamAverageDmg();
 
         while (($team1->getTeamHealth() > 0) && ($team2->getTeamHealth() > 0)) {
-            $team1->setTeamHealth($team1->getTeamHealth() - $teamAverageDmg1)
-            $team2->setTeamHealth($team2->getTeamHealth() - $teamAverageDmg2)
+            $team1->setTeamHealth($team1->getTeamHealth() - $teamAverageDmg1);
+            $team2->setTeamHealth($team2->getTeamHealth() - $teamAverageDmg2);
+        }
 
         $teams = array($team1, $team2);
 
