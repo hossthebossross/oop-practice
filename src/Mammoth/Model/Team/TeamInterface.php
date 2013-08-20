@@ -13,6 +13,6 @@ interface TeamInterface
     public function setHealth($health);
     public function getHealth();
     public function getDamage();
-    public function setTeamName($teamName); 
-    public function getTeamName();
+    public function setName($name); 
+    public function getName();
 }

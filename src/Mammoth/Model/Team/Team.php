@@ -11,10 +11,10 @@ class Team implements TeamInterface
      */
     protected $units = array();
 
-    public function __construct($units, $teamName)
+    public function __construct($units, $name)
     {
         $this->setUnits($units);
-        $this->setTeamName($teamName);
+        $this->setName($name);
     }
 
     public function setUnits(array $units)
@@ -41,7 +41,7 @@ class Team implements TeamInterface
             }
         }
     }
-
+    
     public function setHealth($health)
     {
         $this->health = $health;
@@ -71,14 +71,14 @@ class Team implements TeamInterface
         return $damage;
     }
 
-    public function setTeamName($teamName) 
+    public function setName($name) 
       {
-        $this->setTeamName = $teamName;
+        $this->setName = $name;
     }
  
-    public function getTeamName()
+    public function getName()
     {
-        $this->teamName;
+        $this->name;
     }
 
 }
