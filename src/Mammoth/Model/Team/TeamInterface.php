@@ -2,7 +2,7 @@
 
 namespace Mammoth\Model\Team;
 
-use Mammoth\Model\UnitInterface;
+use Mammoth\Model\Units\UnitInterface;
 
 interface TeamInterface
 {
