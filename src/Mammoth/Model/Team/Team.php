@@ -11,7 +11,6 @@ class Team implements TeamInterface
      */
     protected $units = array();
 
-
     public function __construct($units, $teamName)
     {
         $this->setUnits($units);
