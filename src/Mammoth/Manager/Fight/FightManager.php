@@ -26,8 +26,7 @@ class FightManager
         }
 
         if ($winner) {
-            return $winner;
-            //return sprintf('The winner is %s', $winner->getName());
+            return sprintf('The winner is %s', $winner->getName());
         }
 
         return 'Everyones dead';

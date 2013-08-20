@@ -10,6 +10,7 @@ class Team implements TeamInterface
      * @var array of Unit objects
      */
     protected $units = array();
+    protected $name;
 
     public function __construct($units, $name)
     {
@@ -41,7 +42,7 @@ class Team implements TeamInterface
             }
         }
     }
-    
+
     public function setHealth($health)
     {
         $this->health = $health;
@@ -72,13 +73,12 @@ class Team implements TeamInterface
     }
 
     public function setName($name) 
-      {
-        $this->setName = $name;
+    {
+        $this->name = $name;
     }
  
     public function getName()
     {
         $this->name;
     }
-
 }
