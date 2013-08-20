@@ -11,6 +11,7 @@ class Team implements TeamInterface
      */
     protected $units = array();
     protected $name;
+    protected $health;
 
     public function __construct($units, $name)
     {
@@ -79,6 +80,6 @@ class Team implements TeamInterface
  
     public function getName()
     {
-        $this->name;
+        return $this->name;
     }
 }
