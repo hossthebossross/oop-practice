@@ -16,8 +16,8 @@ $zealot2 = new Zealot();
 $marine1 = new Marine();
 $marine2 = new Marine();
 
-$team1 = new Team(array($zealot1, $zealot2));
-$team2 = new Team(array($marine1, $marine2));
+$team1 = new Team(array($zealot1, $zealot2), 'green');
+$team2 = new Team(array($marine1, $marine2), 'blue');
 
 $fightResult = FightManager::fight($team1, $team2);
 

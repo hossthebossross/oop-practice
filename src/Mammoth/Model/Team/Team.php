@@ -11,9 +11,11 @@ class Team implements TeamInterface
      */
     protected $units = array();
 
-    public function __construct($units)
+
+    public function __construct($units, $teamName)
     {
         $this->setUnits($units);
+        $this->setTeamName($teamName);
     }
 
     public function setUnits(array $units)
@@ -69,4 +71,15 @@ class Team implements TeamInterface
 
         return $damage;
     }
+
+    public function setTeamName($teamName) 
+      {
+        $this->setTeamName = $teamName;
+    }
+ 
+    public function getTeamName()
+    {
+        $this->teamName;
+    }
+
 }
